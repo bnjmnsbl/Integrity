@@ -11,20 +11,21 @@
     <main>
         <div class="jumbotron">
       
-            <%if (link.length) { %>
-            <p>Redirecting to...</p>  
-            <a href="<%=link[0].long %>">
-            <%=link[0].long %>
-            </a>
-            <script>
-            setTimeout(function(){
-            window.location.href = "<%=link[0].long%>";
-            },1000);
-            </script>
-            <% } else { %>
-            <p>Not a valid Url. Hint: use /new/www.xyz.com to create a new URL</p>
-            <% } %>
-    
+            <p> Seite:
+            <%=link[0].long%></p>
+            
+            <p>Mitarbeiter:
+            <%=link[0].employees%> </p>
+            
+            <p>Gründungsjahr:  
+            <%=link[0].founded%> </p>
+            
+            <p>Eigentümer:  
+            <%=link[0].owner%> </p>
+            
+            <p>Glaubwürdigkeit:  
+            <%=link[0].integrity%> </p>
+            
         </div>  
     </main>
     
