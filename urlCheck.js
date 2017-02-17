@@ -1,9 +1,17 @@
 
 
 exports.urlAdapt = function(value) {
-    if (value.search("www") === 0) {
-    value = "http://" + value
-} 
+    
+    if (value.search("https") === 0) {
+        value = value.substring(8)
+    } 
+    else if (value.search("http") === 0) {
+        value = value.substring(7)
+    }
+    if (value.search("www") !== 0) { //ziemlich unsauber, sollte ich fixen
+        value = "www." + value;
+    }
+    value = value.split("/")[0];
     return value 
 }
 

@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+   <%include ../partials/head %>
+</head>
+    
+<body class="container">
+    <header>
+        <% include ../partials/header %>
+    </header>
+    
+    <main>
+        <div class="jumbotron">
+            
+        <form action="/quotes" method="POST">
+            <input type="text" placeholder="name" name="long"/> <br />
+            <input type="text" placeholder="Mitarbeiter" name="employees"/> <br />
+            <input type="text" placeholder="Gründungsjahr" name="founded"/> <br />
+            <input type="text" placeholder="Eigentümer" name="owner"/> <br />
+            <input type="text" placeholder="Score" name="integrity"/> <br />
+            <button type="submit">Senden</button>
+            </form>
+        </div>  
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+</body>
+    
+</html>
